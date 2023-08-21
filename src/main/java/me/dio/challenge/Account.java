@@ -1,4 +1,4 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
  * The mother of all bank accounts in this program
@@ -6,11 +6,9 @@ package br.dio.challenge;
 
 public abstract class Account implements IAccount {
 
-	private static final int DEFAULT_AGENCY = 1;
+	private static final String DEFAULT_AGENCY = "0001";
 	private static int SEQUENTIAL = 1;
-
-
-	protected int agency;
+	protected String agency;
 	protected int number;
 	protected double balance;
 	protected Client client;
@@ -20,8 +18,13 @@ public abstract class Account implements IAccount {
 		this.number = SEQUENTIAL++;
 		this.client = client;
 	}
+	public Account(Client client, String agency) {
+		this.agency = agency;
+		this.number = SEQUENTIAL++;
+		this.client = client;
+	}
 
-	public int getAgency() {
+	public String getAgency() {
 		return agency;
 	}
 
@@ -35,10 +38,11 @@ public abstract class Account implements IAccount {
 
 	@Override
 	public String toString() {
-		return String.format("Client: %s" +
-			"\nAgency: %d" +
-			"\nNumber: %d" +
-			"\nBalance: %.2f", client, agency, number, balance);
+		return String.format("""
+			Client: %s
+			Agency: %s
+			Number: %d
+			Balance: %.2f""", client, agency, number, balance);
 	}
 
 	@Override

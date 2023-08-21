@@ -1,4 +1,4 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
  * Default Account interface with default bank account methods

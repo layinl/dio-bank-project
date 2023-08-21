@@ -1,7 +1,8 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
- * A default savings account, with rates based on SELIC interest and general Brazilian savings interest
+ * A default savings account, with rates based on SELIC interest
+ * and general Brazilian savings interest
  * (equal or less than 8.5% of the SELIC interest)
  */
 public class SavingsAccount extends Account {

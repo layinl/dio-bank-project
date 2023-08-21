@@ -1,7 +1,8 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
- * A default digital account, with rates based on SELIC interest (100% CDI)
+ * A default digital account, with rates based on SELIC interest
+ * as of August 1st, 2023 (100% of the Interbank Deposit Certificate)
  */
 public class DigitalAccount extends Account {
 
@@ -9,6 +10,10 @@ public class DigitalAccount extends Account {
 
 	public DigitalAccount(Client client) {
 		super(client);
+	}
+
+	public DigitalAccount(Client client, String agency) {
+		super(client, agency);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
  * Client class, for any client that creates one or many accounts
@@ -23,4 +23,5 @@ public class Client {
 	public String toString() {
 		return this.getName();
 	}
+
 }

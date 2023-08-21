@@ -1,4 +1,4 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +9,11 @@ import java.util.List;
 public class Bank {
 
 	private String name;
-	private List<Client> client;
+	private List<Client> clients;
 
 	public Bank(String name) {
 		this.name = name;
-		client = new ArrayList<>();
+		clients = new ArrayList<>();
 	}
 
 	public String getName() {
@@ -24,19 +24,19 @@ public class Bank {
 		this.name = name;
 	}
 
-	public List<Client> getClient() {
-		return client;
+	public List<Client> getClients() {
+		return clients;
 	}
 
 	public void addClient(Client client) {
-		this.client.add(client);
+		this.clients.add(client);
 	}
 
 	@Override
 	public String toString() {
 		return "Bank{" +
 			"name='" + name + '\'' +
-			", client=" + client +
+			", client=" + clients +
 			'}';
 	}
 

@@ -1,4 +1,4 @@
-package br.dio.challenge;
+package me.dio.challenge;
 
 /**
  * A default checking account
